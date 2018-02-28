@@ -15,17 +15,14 @@ public class Main4Activity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
     }
 
-    public void la(View view) {
-        Intent intent1 = new Intent(this, Main5Activity.class);
-        startActivity(intent1);
-        finish();
-    }
     public void bot(View view) {
         Intent intent2 = new Intent(this, Main5Activity.class);
+        intent2.putExtra("in",1);
         startActivity(intent2);
     }
     public void net(View view) {
         Intent intent = new Intent(this, Main5Activity.class);
+        intent.putExtra("in",2);
         startActivity(intent);
     }
 }

@@ -30,12 +30,11 @@
         android:textColor="#d60c05"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:textStyle="normal|bold"
-        android:layout_marginBottom="10dp" />
+        android:textStyle="normal|bold" />
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="6dp"
     android:layout_below="@id/tt"
     android:layout_centerVertical="true"
     android:orientation="horizontal">
@@ -153,13 +152,12 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:textStyle="normal|bold"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView7"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="6dp"
         android:layout_centerVertical="true"
         android:orientation="horizontal">
         <Button

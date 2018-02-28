@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main6"
+    android:id="@+id/activity_main16"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="7dp"
     android:background="#243582"
     android:backgroundTint="#000000"
-    tools:context="com.example.purvampujari.magicmove.Main6Activity">
+    tools:context="com.example.purvampujari.magicmove.Main16Activity">
     <TextView
         android:text=""
         android:layout_width="match_parent"
@@ -105,7 +105,7 @@
             android:text="SCORE"
             android:layout_width="match_parent"
             android:layout_height="22dp"
-            android:textSize="18dp"
+            android:textSize="16sp"
             android:maxLines="1"
             android:id="@+id/tt1"
             android:background="#126745"
@@ -120,7 +120,7 @@
             android:maxLines="1"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="38dp"
+            android:textSize="36sp"
             android:gravity="center_vertical|center_horizontal"
             android:background="#ec4c4c"
             android:textColor="#ffffff"
@@ -133,10 +133,9 @@
         android:id="@+id/rr"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/ll1"
-            android:onClick="call_ll1"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:orientation="vertical">
@@ -149,10 +148,10 @@
                 android:textColor="#ffffff"
                 android:id="@+id/textView1"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp" />
+                android:textSize="11sp" />
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="74dp"
                 app:srcCompat="@drawable/card2"
 
                 android:scaleType="centerCrop"
@@ -172,13 +171,12 @@
                 android:textColor="#ffffff"
                 android:id="@+id/s1"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp" />
+                android:textSize="11sp" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/ll6"
-            android:onClick="call_ll6"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
@@ -193,10 +191,10 @@
                 android:textColor="#ffffff"
                 android:id="@+id/textView6"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp" />
+                android:textSize="11sp" />
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="74dp"
                 app:srcCompat="@drawable/card2"
 
                 android:scaleType="centerCrop"
@@ -216,13 +214,12 @@
                 android:textColor="#ffffff"
                 android:id="@+id/s6"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp" />
+                android:textSize="11sp" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/ll7"
-            android:onClick="call_ll7"
             android:layout_alignParentRight="true"
             android:layout_marginRight="8dp"
             android:layout_alignParentTop="true"
@@ -236,11 +233,11 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp"
+                android:textSize="11sp"
                 android:id="@+id/textView7" />
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="74dp"
                 app:srcCompat="@drawable/card2"
 
                 android:scaleType="centerCrop"
@@ -259,15 +256,14 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="13dp"
+                android:textSize="11sp"
                 android:id="@+id/s7" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:id="@+id/ll4"
-            android:onClick="call_ll4"
             android:layout_marginLeft="136dp"
             android:orientation="vertical">
             <TextView
@@ -279,11 +275,11 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp"
+                android:textSize="11sp"
                 android:id="@+id/textView4" />
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="74dp"
                 app:srcCompat="@drawable/card2"
 
                 android:scaleType="centerCrop"
@@ -302,15 +298,14 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp"
+                android:textSize="11sp"
                 android:id="@+id/s4" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:id="@+id/ll5"
-            android:onClick="call_ll5"
             android:layout_alignParentRight="true"
             android:layout_marginRight="136dp"
             android:orientation="vertical">
@@ -323,11 +318,11 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp"
+                android:textSize="11sp"
                 android:id="@+id/textView5" />
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="74dp"
                 app:srcCompat="@drawable/card2"
                 android:scaleType="centerCrop"
                 android:background="#066420"
@@ -345,18 +340,17 @@
                 android:background="#066420"
                 android:textColor="#ffffff"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="12dp"
+                android:textSize="11sp"
                 android:id="@+id/s5" />
         </LinearLayout>
     </RelativeLayout>
 
 
     <LinearLayout
-        android:layout_width="90dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:id="@+id/ll2"
-        android:onClick="call_ll2"
         android:layout_centerVertical="true"
         android:layout_above="@id/ll0"
         android:layout_marginBottom="11dp"
@@ -372,10 +366,10 @@
             android:textColor="#ffffff"
             android:id="@+id/textView2"
             android:gravity="center_vertical|center_horizontal"
-            android:textSize="12dp" />
+            android:textSize="11sp" />
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="74dp"
             app:srcCompat="@drawable/card2"
 
             android:scaleType="centerCrop"
@@ -395,18 +389,17 @@
             android:textColor="#ffffff"
             android:id="@+id/s2"
             android:gravity="center_vertical|center_horizontal"
-            android:textSize="12dp" />
+            android:textSize="11sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="90dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_above="@id/ll0"
         android:layout_marginBottom="11dp"
         android:layout_marginRight="8dp"
         android:id="@+id/ll3"
-        android:onClick="call_ll3"
         android:layout_centerVertical="true"
         android:orientation="vertical">
         <TextView
@@ -418,11 +411,11 @@
             android:background="#066420"
             android:textColor="#ffffff"
             android:gravity="center_vertical|center_horizontal"
-            android:textSize="12dp"
+            android:textSize="11sp"
             android:id="@+id/textView3" />
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="74dp"
             app:srcCompat="@drawable/card2"
             android:scaleType="centerCrop"
             android:background="#066420"
@@ -440,153 +433,8 @@
             android:background="#066420"
             android:textColor="#ffffff"
             android:gravity="center_vertical|center_horizontal"
-            android:textSize="12dp"
+            android:textSize="11sp"
             android:id="@+id/s3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="310dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="11dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/lll"
-        android:background="#066420"
-        android:padding="3dp"
-        android:layout_above="@id/ll0"
-        android:orientation="horizontal"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="3dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:backgroundTint="#066420"
-                >
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/elixir"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/imageView01"
-                    android:onClick="elixir_call" />
-
-                <TextView
-                    android:text=" x5 "
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView01"
-                    android:background="#000000"
-                    android:textColor="#57b2f4"
-                    android:textSize="10dp" />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="3dp"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:backgroundTint="#066420">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/zenix"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/imageView02"
-                    android:onClick="felicis_call" />
-                <TextView
-                    android:text=" x5 "
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView02"
-                    android:textSize="10dp"
-                    android:background="#000000"
-                    android:textColor="#58f2a5" />
-            </RelativeLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="3dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:backgroundTint="#066420">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/daliton"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/imageView03"
-                    android:onClick="kronos_call" />
-                <TextView
-                    android:text=" x10 "
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:textSize="10dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView03"
-                    android:background="#000000"
-                    android:textColor="#f4b84f" />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:backgroundTint="#066420">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/jinxt"
-                    android:layout_weight="1"
-                    android:scaleType="centerCrop"
-                    android:onClick="jinx_call"
-                    android:id="@+id/imageView04" />
-                <TextView
-                    android:text=" x5 "
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView04"
-                    android:background="#000000"
-                    android:textSize="10dp"
-                    android:textColor="#ed2015" />
-            </RelativeLayout>
-        </LinearLayout>
-
     </LinearLayout>
 
     <TextView
@@ -594,18 +442,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:id="@+id/round"
-        android:layout_above="@+id/lll"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
     <TextView
         android:text="time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ec4c4c"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:id="@+id/timer"
-        android:layout_above="@+id/lll"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@id/round"
         android:layout_marginLeft="50dp" />
 </RelativeLayout>

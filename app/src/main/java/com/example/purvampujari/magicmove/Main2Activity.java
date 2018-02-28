@@ -28,6 +28,7 @@ EditText editText;
             SharedPreferences.Editor editor = sharedPreferences.edit();
             String st = editText.getText().toString();
             editor.putString("username", st);
+            editor.putInt("err",1);
             editor.commit();
             Intent intent = new Intent(this, Main11Activity.class);
             startActivity(intent);

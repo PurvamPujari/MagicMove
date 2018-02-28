@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/mm"
-        android:largeHeap="true"
+        android:icon="@mipmap/mmm"
         android:label="MagicMove"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -70,14 +70,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main10Activity" >
+        <activity android:name=".Main10Activity">
             <intent-filter>
                 <action android:name="com.example.purvampujari.magicmove.Main10Activity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main11Activity" >
+        <activity android:name=".Main11Activity">
             <intent-filter>
                 <action android:name="com.example.purvampujari.magicmove.Main11Activity" />
 
@@ -91,6 +91,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".bic" />
+        <activity android:name=".Main16Activity" />
+        <activity android:name=".Main18Activity" />
+        <activity android:name=".Main7Activity"></activity>
     </application>
 
 </manifest>

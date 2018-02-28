@@ -14,7 +14,10 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static com.example.purvampujari.magicmove.R.id.textView2;
+
 public class Main6Activity extends AppCompatActivity {
+  static int p9=100;
     ImageView imageView[] = new ImageView[8];
     TextView textView01, textView02, textView03, textView04;
     ImageView imageView01,imageView02,imageView03,imageView04;
@@ -23,13 +26,13 @@ public class Main6Activity extends AppCompatActivity {
     LinearLayout lll;
     TextView sc[] = new TextView[8];
     TextView textView[] = new TextView[8];
-    TextView round,tt2,timer;
+    TextView round,tt2,timer,ttt1;
     String str;
     String player_name[] = new String[8];
     int comp_number[] = new int[8];
     int score[] = new int[8];
-    int s, i, r, no_of_rounds = 1, p, st, ed, opt = -1, de, de1 = 0, de2 = 0, de3 = 0, de4 = 0, de0 = 0, elixir_count, jinx_count, felicis_count, kronos_count, e = 0, player_key, jinx_player = 2, j = 0, f = 0;
-    CountDownTimer mCountDownTimer;
+    int s, i, r, no_of_rounds = 1, p, st, ed, opt = -1, de, de1 = 0, de2 = 0, de3 = 0, de4 = 0, de0 = 0, elixir_count, jinx_count, felicis_count, kronos_count, e = 0, player_key, jinx_player = 2, j = 0, f = 0,ppp=-1;
+    CountDownTimer mCountDownTimer,tm,pp;
     long countdownPeriod = 4000;
 
     @Override
@@ -52,13 +55,14 @@ public class Main6Activity extends AppCompatActivity {
         imageView[6] = (ImageView) findViewById(R.id.imageView6);
         imageView[7] = (ImageView) findViewById(R.id.imageView7);
         tt2 = (TextView) findViewById(R.id.tt2);
+        ttt1 = (TextView) findViewById(R.id.tt1);
         timer = (TextView) findViewById(R.id.timer);
         textView01 = (TextView) findViewById(R.id.textView01);
         textView02 = (TextView) findViewById(R.id.textView02);
         textView03 = (TextView) findViewById(R.id.textView03);
         textView04 = (TextView) findViewById(R.id.textView04);
         textView[1] = (TextView) findViewById(R.id.textView1);
-        textView[2] = (TextView) findViewById(R.id.textView2);
+        textView[2] = (TextView) findViewById(textView2);
         textView[3] = (TextView) findViewById(R.id.textView3);
         textView[4] = (TextView) findViewById(R.id.textView4);
         textView[5] = (TextView) findViewById(R.id.textView5);
@@ -149,12 +153,12 @@ public class Main6Activity extends AppCompatActivity {
     }
 
     public void tim() {
-        new CountDownTimer(5210, 1300) {
+      tm=  new CountDownTimer(5210, 1300) {
 
             @Override
             public void onTick(long millisUntilFinished) {
                 String h = millisUntilFinished / 1300 + "";
-                timer.setText(h);
+               timer.setText(h);
             }
 
             @Override
@@ -171,13 +175,12 @@ public class Main6Activity extends AppCompatActivity {
     }
 
     public void start1(final int player_number) {
-        final Intent intent = new Intent(this, Main8Activity.class);
-        final Intent intent2 = new Intent(this, Main10Activity.class);
+
         round.setVisibility(View.INVISIBLE);
         no_of_rounds++;
         for (i = 0; i <= 4; i++)
             imageButton[i].setEnabled(false);
-        new CountDownTimer(2000, 200) {
+        new CountDownTimer(2300, 200) {
 
             public void onTick(long millisUntilFinished) {
                 switch ((int) (millisUntilFinished / 200) % 5) {
@@ -221,67 +224,15 @@ public class Main6Activity extends AppCompatActivity {
                 imageView03.setEnabled(true);
                 imageView04.setEnabled(true);
                 countdownPeriod = 4000;
-                mCountDownTimer = new CountDownTimer(countdownPeriod, 900) {
+        erro();
+                SharedPreferences sharedPreferences =getSharedPreferences("mydata", Context.MODE_PRIVATE);
+                p9=sharedPreferences.getInt("err",100);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("err",7);
+                editor.commit();
+                tt2.setText(p9+"."+sharedPreferences.getInt("err",100));
+               if(p9==1){   editor.putInt("err",97);     ttt1.setText(p9+";"+sharedPreferences.getInt("err",100)); ppp=1; hello(countdownPeriod+100);  mCountDownTimer.cancel(); countdownPeriod+=150; erro();}
 
-                    public void onTick(long millisUntilFinished) {
-                        timer.setText(" " + millisUntilFinished / 900);
-                        countdownPeriod = millisUntilFinished;
-                    }
-
-                    public void onFinish() {
-                        timer.setText(" ");
-                            calc(player_key);
-                            if (no_of_rounds == r + 1) {
-                                SharedPreferences sharedPreferences = getSharedPreferences("mydata", Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putInt("default_opt", de);
-                                editor.putInt("elixir",elixir_count);
-                                editor.putInt("felicis",felicis_count);
-                                editor.putInt("jinx",jinx_count);
-                                editor.putInt("kronos",kronos_count);
-                                editor.commit();
-                                intent.putExtra("player0", score[0]);
-                                intent.putExtra("player1", score[1]);
-                                intent.putExtra("player2", score[2]);
-                                intent.putExtra("player3", score[3]);
-                                intent.putExtra("player4", score[4]);
-                                intent.putExtra("player5", score[5]);
-                                intent.putExtra("player6", score[6]);
-                                intent.putExtra("player7", score[7]);
-                                intent.putExtra("bot_player", p);
-                                startActivity(intent);
-                                finish();
-                            }
-                            for (i = 0; i <= 4; i++)
-                                imageButton[i].setBackgroundColor(0xff57b2f4);
-                            for (i = st; i <= ed; i++) {
-                                imageView[i].setBackgroundColor(0xff066420);
-                                sc[i].setBackgroundColor(0xff066420);
-                                textView[i].setBackgroundColor(0xff066420);
-                                imageView[i].setImageResource(R.drawable.card2);
-                            }
-                            for (i = 0; i <= 4; i++)
-                                imageButton[i].setEnabled(true);
-                        intent2.putExtra("rou",no_of_rounds);
-                        startActivity(intent2);
-                            str = "ROUND  :  " + no_of_rounds;
-                        if (no_of_rounds != r + 1)
-                            round.setText(str);
-                            round.setVisibility(View.VISIBLE);
-                            opt = -1;
-                            e = 0;
-                            j = 0;
-                            f = 0;
-                            imageView01.setEnabled(false);
-                            imageView02.setEnabled(false);
-                            imageView03.setEnabled(false);
-                            imageView04.setEnabled(false);
-                            lll.setBackgroundColor(0xff066420);
-                            timer.setTextColor(0xffec4c4c);
-                            tim();
-                        }
-                };
-                mCountDownTimer.start();
             }
         }.start();
     }
@@ -464,7 +415,7 @@ public class Main6Activity extends AppCompatActivity {
         tt2.setText(str);
     }
 
-    public void elixir_call(View view) {
+    public void elixir_call(View view) {ppp=-1;hello(countdownPeriod + 4800);
         if (elixir_count > 0) {
             imageView01.setEnabled(false);
             imageView02.setEnabled(false);
@@ -475,14 +426,13 @@ public class Main6Activity extends AppCompatActivity {
             textView01.setText(str);
                 mCountDownTimer.cancel();
             countdownPeriod += 5000;
-            mCountDownTimer.start();
-            mCountDownTimer.start();
+          erro();
             for(i=0;i<=4;i++)
                 imageButton[i].setEnabled(true);
         }
     }
 
-    public void felicis_call(View view) {
+    public void felicis_call(View view) {ppp=-1;hello(countdownPeriod + 4800);
         if (felicis_count > 0) {
             imageView01.setEnabled(false);
             imageView02.setEnabled(false);
@@ -495,22 +445,22 @@ public class Main6Activity extends AppCompatActivity {
                 ll[i].setEnabled(true);
                 mCountDownTimer.cancel();
             countdownPeriod += 5000;
-            mCountDownTimer.start();
+           erro();
         }
     }
 
-    public void kronos_call(View view) {
+    public void kronos_call(View view) {ppp=-1;hello(countdownPeriod + 9800);
         if (kronos_count > 0) {
             kronos_count--;
             str = " x" + kronos_count + " ";
             textView03.setText(str);
                 mCountDownTimer.cancel();
             countdownPeriod += 10000;
-            mCountDownTimer.start();
+            erro();
         }
     }
 
-    public void jinx_call(View view) {
+    public void jinx_call(View view) {ppp=-1;hello(countdownPeriod + 4800);
         if (jinx_count > 0) {
             imageView01.setEnabled(false);
             imageView02.setEnabled(false);
@@ -522,7 +472,7 @@ public class Main6Activity extends AppCompatActivity {
                 ll[i].setEnabled(true);
                 mCountDownTimer.cancel();
             countdownPeriod += 5000;
-            mCountDownTimer.start();
+            erro();
         }
     }
 
@@ -636,5 +586,82 @@ public class Main6Activity extends AppCompatActivity {
             for (i = 0; i <= 4; i++)
                 imageButton[i].setEnabled(true);
         }
+    }
+    public void erro() {       final Intent intent = new Intent(this, Main8Activity.class);
+        final Intent intent2 = new Intent(this, Main10Activity.class);
+        mCountDownTimer = new CountDownTimer(countdownPeriod, 900) {
+
+            public void onTick(long millisUntilFinished) {
+                timer.setText(" " + millisUntilFinished/900);
+                countdownPeriod = millisUntilFinished;
+            }
+
+            public void onFinish() { if(ppp==0) {
+                timer.setText(" " );
+                calc(player_key);
+                if (no_of_rounds == r + 1&&(ppp==0)) {
+                    SharedPreferences sharedPreferences = getSharedPreferences("mydata", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putInt("default_opt", de);
+                    editor.putInt("elixir", elixir_count);
+                    editor.putInt("felicis", felicis_count);
+                    editor.putInt("jinx", jinx_count);
+                    editor.putInt("kronos", kronos_count);
+                    editor.commit();
+                    intent.putExtra("player0", score[0]);
+                    intent.putExtra("player1", score[1]);
+                    intent.putExtra("player2", score[2]);
+                    intent.putExtra("player3", score[3]);
+                    intent.putExtra("player4", score[4]);
+                    intent.putExtra("player5", score[5]);
+                    intent.putExtra("player6", score[6]);
+                    intent.putExtra("player7", score[7]);
+                    intent.putExtra("bot_player", p);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    for (i = 0; i <= 4; i++)
+                        imageButton[i].setBackgroundColor(0xff57b2f4);
+                    for (i = st; i <= ed; i++) {
+                        imageView[i].setBackgroundColor(0xff066420);
+                        sc[i].setBackgroundColor(0xff066420);
+                        textView[i].setBackgroundColor(0xff066420);
+                        imageView[i].setImageResource(R.drawable.card2);
+                    }
+                    for (i = 0; i <= 4; i++)
+                        imageButton[i].setEnabled(true);
+                    intent2.putExtra("rou", no_of_rounds);
+                    //    startActivity(intent2);
+                    str = "ROUND  :  " + no_of_rounds;
+                    if (no_of_rounds != r + 1)
+                        round.setText(str);
+                    round.setVisibility(View.VISIBLE);
+                    opt = -1;
+                    e = 0;
+                    j = 0;
+                    f = 0;
+                    imageView01.setEnabled(false);
+                    imageView02.setEnabled(false);
+                    imageView03.setEnabled(false);
+                    imageView04.setEnabled(false);
+                    lll.setBackgroundColor(0xff066420);
+                    timer.setTextColor(0xffec4c4c);
+                    tim();
+                }
+            }}
+        }.start();
+    }
+    public void hello(long m){
+        pp= new CountDownTimer(m,900) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                ppp=0;
+            }
+        }.start();
     }
 }
